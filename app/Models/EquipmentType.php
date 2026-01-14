@@ -1,41 +1,25 @@
 <?php
-// app/Models/Room.php
 
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Room extends Model
+class EquipmentType extends Model // ← Fixed!
 {
     use HasFactory;
 
-    protected $fillable = [
-        'room_code',
-        'building',
-        'floor',
-        'description',
-    ];
+    protected $fillable = ["name", "description", "maintenance_frequency_days"];
 
     protected $casts = [
-        'floor' => 'integer',
-        'created_at' => 'datetime',
-        'updated_at' => 'datetime',
+        "maintenance_frequency_days" => "integer",
+        "created_at" => "datetime",
+        "updated_at" => "datetime",
     ];
 
     // Relationships
     public function equipment()
     {
         return $this->hasMany(Equipment::class);
-    }
-
-    public function maintenanceSessions()
-    {
-        return $this->hasMany(MaintenanceSession::class);
-    }
-
-    public function faults()
-    {
-        return $this->hasMany(Fault::class);
     }
 }
