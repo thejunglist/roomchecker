@@ -1,9 +1,8 @@
 <template>
      <div class="header">
-  <a href="#default" class="logo">CompanyLogo</a>
+  <a href="#default" class="logo">Learning Space Support</a>
   <div class="header-right">
     <a class="active" href="#home">Home</a>
-    <a href="#contact">Contact</a>
     <a href="#about">About</a>
   </div>
 
@@ -86,11 +85,12 @@ const handleLogin = async () => {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-image: url('./campus.jpg');
+  background-image: url('./campus.jpeg');
   background-size: cover;
   background-position: center;
 }
 
+      
 .login-card {
   background: white;
   padding: 2rem;
@@ -98,7 +98,10 @@ const handleLogin = async () => {
   box-shadow: 0 10px 40px rgba(0,0,0,0.2);
   width: 100%;
   max-width: 400px;
+  
 }
+
+
 
 .login-card h2 {
   margin-bottom: 1.5rem;
